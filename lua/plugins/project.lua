@@ -5,6 +5,7 @@ return {
 			"~/projects/*",
 			"~/dev/*",
 			"~/Small/*",
+			"~/prod/*",
 			"~/.config/*",
 		},
 		picker = {

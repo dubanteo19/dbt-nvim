@@ -10,7 +10,6 @@ return {
 				"~/.config",
 				"~/.config/nvim",
 				"~/dev",
-				"~/dev/tai-lieu-xanh-project/tai-lieu-xanh-app",
 			},
 		})
 	end,

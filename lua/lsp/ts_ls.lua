@@ -17,18 +17,13 @@ return {
 			codeLens = { enabled = false },
 		},
 	},
-	commands = {
-		OrganizeImports = {
-			organize_imports,
-			description = "Organize Imports",
-		},
-	},
 	root_dir = require("lspconfig").util.root_pattern("tsconfig.json", "package.json", ".git"),
 	flags = { debounce_text_changes = 150 },
 	single_file_support = false,
 	on_attach = function(client, bufnr)
 		client.server_capabilities.documentFormattingProvider = false
 		client.server_capabilities.document_range_formatting = false
+		vim.keymap.set("n", "<leader>oi", organize_imports, { buffer = bufnr, desc = "Organize Imports" })
 		keymaps.set_lsp_keymaps(bufnr)
 	end,
 }

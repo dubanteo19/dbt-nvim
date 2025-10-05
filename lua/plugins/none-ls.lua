@@ -11,6 +11,9 @@ return {
 				null_ls.builtins.formatting.prettier,
 			},
 		})
-		vim.keymap.set("n", "<C-A-l>", vim.lsp.buf.format, {})
+		vim.keymap.set("n", "<C-A-l>", function()
+			vim.lsp.buf.format()
+			vim.cmd("write")
+		end, {})
 	end,
 }

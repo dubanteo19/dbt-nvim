@@ -10,12 +10,13 @@ return {
 		"build.gradle.kts",
 		".git",
 	},
-
 	jdtls = {
+		enable = true,
 		version = "v1.43.0",
 	},
 
 	lombok = {
+		enable = true,
 		version = "nightly",
 	},
 
